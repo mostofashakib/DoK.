@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>  DoK </title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Rubik:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-merged.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="import" href="/login">
+    <link rel="import" href="/sign">
+  </head>
+  <body>
+
+  <!-- START: header -->
+  
+  <div class="probootstrap-loader"></div>
+
+  <header role="banner" class="probootstrap-header">
+    <div class="container">
+        <a href="/" class="probootstrap-logo"> DOK </a>
+        <nav role="navigation" class="probootstrap-nav">
+          <ul class="probootstrap-main-nav">
+                    <% if(!currentUser){ %>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Sign Up</a></li>
+                    <% } else { %>
+                        <li><a href="#">Signed In As <%= currentUser.username %></a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    <% } %>
+          </ul>
+        </div>
+        </nav>
+    </div>
+    
+    <div class="container">
+        
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+    
+  </header>
+
+    <section class="probootstrap-slider flexslider">
+      <ul class="slides">
+         <!-- class="overlay" -->
+        <li style="background-image: url(images/onek.png);">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="probootstrap-slider-text text-center">
+                  <h1 class="probootstrap-heading probootstrap-animate mb20"> Talk to your Dok! </h1>
+                  <h3> From anywhere! </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- class="overlay" -->
+        <li style="background-image: url(images/two.png);">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="probootstrap-slider-text text-center">
+                  <h1 class="probootstrap-heading probootstrap-animate mb20"> Contact to your Dok! </h1>
+                  <h3> Super quickly! </h3>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  <div class="probootstrap-main-content">
+    <section class="probootstrap-half">
+      <div class="image-wrap">
+        <div class="image" style="background-image: url(images/three.png);"></div>
+      </div>
+      <div class="text">
+        <h3 class="mt0 mb40"> Our goal... </h3>
+        <p>  The concept behind the app, Dok., is to connect possible patients and doctors in a similar way mobile app driving companies connect drivers and
+             passangers. The patient is promted to make an account, search key words in the serach bar of an illness they have and would
+             like a doctors assistance with. The doctors, that are qualified to help with the issues specified by the pacient, pop up on a map whos'
+             radius is specified by the user/patient. They then have the opportuinity to browse the doctors profiles to look at ratings, comments and
+             consultation prices to decide who they would like to visit. No more precious time spent at the clinic becase that time is your time 
+             put it to use your way with Dok.  </p>
+      </div>
+    </section>
+    
+      <div class="row" id="c">
+    <div class="column">
+      <img src="images/3.jpg" id="dock">
+      <div class ="weird2">
+      </div>
+      <div>
+        <a href="/business" style="margin-left:350px; font-size: 50px;"> Enter </a>
+      </div>
+    </div>
+  </div>
+    </div>
+
+    <div class="probootstrap-footer-spacer"></div>
+    <footer class="probootstrap-footer">
+      <div class="probootstrap-footer-section">
+        <div class="container">
+          <div class="row mb80">
+            <div class="col-md-4">
+              <div class="probootstrap-footer-widget">
+              <h3>About Us</h3>
+              <p> We believe everyone deserves the best medication at an affordable price! </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <div class="probootstrap-footer-widget">
+                <h3>Connect with us</h3>
+                <ul class="probootstrap-footer-social">
+                  <li><a href="#"><i class="icon-twitter"></i></a></li>
+                  <li><a href="#"><i class="icon-facebook"></i></a></li>
+                  <li><a href="#"><i class="icon-instagram2"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <p class="text-center"> Designed and Developed by Mostofa Adib Shakib. </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
+  </div>
+
+  <script src="js/scripts.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script src="js/custom.js"></script>
+
+  </body>
+</html>
