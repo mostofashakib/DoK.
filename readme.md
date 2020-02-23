@@ -14,7 +14,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Authors
 
-Mostofa Adib Shakib, Samuel Okei
+Mostofa Adib Shakib
 
 ## License
 
