@@ -8,9 +8,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Built With
 
-* Languages: HTML, CSS, JavaScript, Node.JS, Bootstrap
-* Framework: Bootstrap, Express
-* Database: MongoDB
+Front-End: HTML5, CSS3, JavaScript, Bootstrap, jQuery,
+Back-End: Express, Node.JS, Java.
+Database: MongoDB
+
+## Website
+
+Link: www.heyyydok.com
 
 ## Authors
 
